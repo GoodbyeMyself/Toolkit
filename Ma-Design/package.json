@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "bootstrap": "lerna bootstrap",
+        "clean": "lerna clean",
+        "commit": "git-cz",
+        "prepare": "husky install",
+        "commitlint": "commitlint --config .commitlintrc.js -e -V",
+        "lint": "lint-staged",
+        "build": "lerna exec -- babel src -d dist --config-file ../../babel.config.js",
+        "publish": "npm run build && lerna publish"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-lerna-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "standard --fix",
+            "git add"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.21.0",
+        "@babel/core": "^7.21.4",
+        "@babel/node": "^7.20.7",
+        "@babel/preset-env": "^7.21.4",
+        "@commitlint/cli": "^17.6.1",
+        "@commitlint/config-conventional": "^17.6.1",
+        "babel-preset-minify": "^0.5.2",
+        "commitizen": "3.1.1",
+        "cz-lerna-changelog": "^2.0.3",
+        "husky": "^8.0.3",
+        "lerna": "3.15.0",
+        "lint-staged": "^13.2.1",
+        "standard": "^17.0.0"
+    }
+}

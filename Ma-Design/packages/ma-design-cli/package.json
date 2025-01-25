@@ -1,0 +1,34 @@
+{
+  "name": "ma-design-cli",
+  "version": "0.2.1",
+  "description": "ma-design 的 脚手架",
+  "keywords": [
+    "ma-design"
+  ],
+  "author": "DESKTOP-QRJTCH5\\MaYunLong <15500409521@163.com>",
+  "homepage": "https://gitlab.com/GoodbyeMyself/ma-design#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/GoodbyeMyself/ma-design.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/ma-design-cli.test.js"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/GoodbyeMyself/ma-design/issues"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "ma-design-utils": "^0.2.1"
+  },
+  "gitHead": "ebd4a08156c6e9b52ac57573593d1a76fe16bff3"
+}

@@ -1,0 +1,18 @@
+{
+    "useWorkspaces": true,
+    "version": "0.2.1",
+    "packages": [
+        "packages/*"
+    ],
+    "command": {
+        "bootstrap": {
+            "hoist": true
+        },
+        "version": {
+            "conventionalCommits": true
+        }
+    },
+    "ignoreChanges": [
+        "**/*.md"
+    ]
+}
