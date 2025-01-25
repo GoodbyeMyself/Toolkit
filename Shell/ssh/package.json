@@ -1,0 +1,23 @@
+{
+	"name": "ssh",
+	"version": "1.0.0",
+	"description": "ssh 工具, 通过本地命令 直接上传文件  到服务器",
+	"main": "index.js",
+	"scripts": {
+		"deploy": "node ./deploy"
+	},
+	"keywords": [
+		"ssh"
+	],
+	"author": "M.yunlong",
+	"license": "ISC",
+	"devDependencies": {
+		"fs-extra": "8.1.0",
+		"cross-env": "^7.0.2",
+		"chalk": "^4.1.0",
+		"ora": "^3.4.0",   
+		"readline": "^1.3.0",
+		"scp2": "^0.5.0",
+		"ssh2": "^1.11.0"
+	}
+}
